@@ -1,3 +1,1 @@
-sudo docker run -it \
--e AFP_LOGIN=timemachine -e AFP_PASSWORD=timemachine -e AFP_NAME=TMBackup -e AFP_SIZE_LIMIT=1024000 \
---net=host -d vsdx/timemachine:v1.0
+sudo docker run -it -d --net=host tftp:1.0

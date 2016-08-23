@@ -22,9 +22,10 @@ RUN mkdir -p ${tftp_path}
 RUN chmod 777 ${tftp_path}
 RUN chown nobody:nogroup ${tftp_path}
 
-RUN /etc/init.d/xinetd restart
-
 ADD conf/tftp /etc/xinetd.d/
 
-RUN update-rc.d tftp defaults
+RUN /etc/init.d/xinetd restart
+
+
+RUN update-rc.d xinetd defaults
 
